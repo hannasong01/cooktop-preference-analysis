@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Hanna Song, Paul Derisemu, Tejas Phirke, Zain Hoda">
+<meta name="dcterms.date" content="2023-12-02">
+
+<title>Cooktop Preference Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="report_files/libs/clipboard/clipboard.min.js"></script>
+<script src="report_files/libs/quarto-html/quarto.js"></script>
+<script src="report_files/libs/quarto-html/popper.min.js"></script>
+<script src="report_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="report_files/libs/quarto-html/anchor.min.js"></script>
+<link href="report_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="report_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="report_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="report_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+<script src="report_files/libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="report_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#type-of-cooktops" id="toc-type-of-cooktops" class="nav-link" data-scroll-target="#type-of-cooktops">Type of Cooktops:</a></li>
+  <li><a href="#product-attributes-and-decision-variables" id="toc-product-attributes-and-decision-variables" class="nav-link" data-scroll-target="#product-attributes-and-decision-variables">Product Attributes and Decision Variables</a></li>
+  </ul></li>
+  <li><a href="#survey-design" id="toc-survey-design" class="nav-link" data-scroll-target="#survey-design">Survey Design</a>
+  <ul class="collapse">
+  <li><a href="#eligibility" id="toc-eligibility" class="nav-link" data-scroll-target="#eligibility">Eligibility</a></li>
+  <li><a href="#respondent-information" id="toc-respondent-information" class="nav-link" data-scroll-target="#respondent-information">Respondent information</a></li>
+  <li><a href="#attributes-and-levels-for-conjoint-quesitons" id="toc-attributes-and-levels-for-conjoint-quesitons" class="nav-link" data-scroll-target="#attributes-and-levels-for-conjoint-quesitons">Attributes and levels for Conjoint Quesitons:</a></li>
+  <li><a href="#educational-material-presented-to-the-respondents." id="toc-educational-material-presented-to-the-respondents." class="nav-link" data-scroll-target="#educational-material-presented-to-the-respondents.">Educational material presented to the respondents.</a></li>
+  <li><a href="#example-figure-of-a-random-conjoint-question" id="toc-example-figure-of-a-random-conjoint-question" class="nav-link" data-scroll-target="#example-figure-of-a-random-conjoint-question">Example figure of a random Conjoint Question</a></li>
+  </ul></li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">Data Analysis</a>
+  <ul class="collapse">
+  <li><a href="#sample-description" id="toc-sample-description" class="nav-link" data-scroll-target="#sample-description">Sample Description</a></li>
+  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning">Data cleaning</a></li>
+  <li><a href="#modeling" id="toc-modeling" class="nav-link" data-scroll-target="#modeling">Modeling</a>
+  <ul class="collapse">
+  <li><a href="#simple-logit-model" id="toc-simple-logit-model" class="nav-link" data-scroll-target="#simple-logit-model">Simple Logit Model</a></li>
+  <li><a href="#mixed-logit-model" id="toc-mixed-logit-model" class="nav-link" data-scroll-target="#mixed-logit-model">Mixed Logit Model</a></li>
+  <li><a href="#subgroup-analysis" id="toc-subgroup-analysis" class="nav-link" data-scroll-target="#subgroup-analysis">Subgroup Analysis</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#willingness-to-pay-model" id="toc-willingness-to-pay-model" class="nav-link" data-scroll-target="#willingness-to-pay-model">Willingness to Pay Model</a></li>
+  <li><a href="#simulation" id="toc-simulation" class="nav-link" data-scroll-target="#simulation">Simulation</a></li>
+  <li><a href="#sensitivity-analysis" id="toc-sensitivity-analysis" class="nav-link" data-scroll-target="#sensitivity-analysis">Sensitivity Analysis</a></li>
+  </ul></li>
+  <li><a href="#final-recommendations-and-conclusions" id="toc-final-recommendations-and-conclusions" class="nav-link" data-scroll-target="#final-recommendations-and-conclusions">Final Recommendations and Conclusions</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
+  <li><a href="#attributes" id="toc-attributes" class="nav-link" data-scroll-target="#attributes">Attributes</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a>
+  <ul class="collapse">
+  <li><a href="#welcome-to-our-survey" id="toc-welcome-to-our-survey" class="nav-link" data-scroll-target="#welcome-to-our-survey">Welcome to our survey!</a></li>
+  <li><a href="#consent-form" id="toc-consent-form" class="nav-link" data-scroll-target="#consent-form">Consent form</a></li>
+  <li><a href="#thanks" id="toc-thanks" class="nav-link" data-scroll-target="#thanks">Thanks!</a></li>
+  <li><a href="#type" id="toc-type" class="nav-link" data-scroll-target="#type">Type</a></li>
+  <li><a href="#attributes-information" id="toc-attributes-information" class="nav-link" data-scroll-target="#attributes-information">Attributes Information</a>
+  <ul class="collapse">
+  <li><a href="#final-cost-price" id="toc-final-cost-price" class="nav-link" data-scroll-target="#final-cost-price">Final Cost Price</a></li>
+  <li><a href="#usage-cost" id="toc-usage-cost" class="nav-link" data-scroll-target="#usage-cost">Usage Cost</a></li>
+  <li><a href="#indoor-air-quality" id="toc-indoor-air-quality" class="nav-link" data-scroll-target="#indoor-air-quality">Indoor air Quality</a></li>
+  <li><a href="#number-of-burners" id="toc-number-of-burners" class="nav-link" data-scroll-target="#number-of-burners">number of burners</a></li>
+  </ul></li>
+  <li><a href="#great-work" id="toc-great-work" class="nav-link" data-scroll-target="#great-work">Great work!</a></li>
+  <li><a href="#thank-you-for-your-feedback" id="toc-thank-you-for-your-feedback" class="nav-link" data-scroll-target="#thank-you-for-your-feedback">Thank you for your feedback!</a></li>
+  <li><a href="#nice-job" id="toc-nice-job" class="nav-link" data-scroll-target="#nice-job">Nice job!</a>
+  <ul class="collapse">
+  <li><a href="#your-completion-code-is-7.098975" id="toc-your-completion-code-is-7.098975" class="nav-link" data-scroll-target="#your-completion-code-is-7.098975">Your completion code is: 7.09897^{5}</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#acknowledgement" id="toc-acknowledgement" class="nav-link" data-scroll-target="#acknowledgement">Acknowledgement</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Cooktop Preference Analysis</h1>
+<p class="subtitle lead">Team Cooktop</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Hanna Song, Paul Derisemu, Tejas Phirke, Zain Hoda </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 2, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+<style type="text/css">
+.justify {
+  text-align: justify !important
+}
+</style>
+</div>
+<section id="abstract" class="level1">
+<h1>Abstract</h1>
+<p>Our project is to identify people’s preferences for different types of stoves –Gas, Electric and Induction. The motivation behind this study is the US Government’s proposed shift to transition from gas to electric/induction stoves for safety and environmental reasons.</p>
+<p>Our preliminary research about <a href="https://docs.google.com/spreadsheets/d/1t7P-EwncM1di8XoGIacFEEggvDJcXtPfUdSaPnEAlM4/edit?usp=sharing">Cooktop types</a> helped us determine the features people are interested in while purchasing cooking stoves: Type, Final Cost, Number of Burners, Average Annual Usage Cost and Indoor Air Quality. Using these attributes, we are designing a survey and will be performing a Conjoint analysis of the results to better understand user preferences. The eventual goal is to be able to provide insights to policymakers for refining existing policies and facilitating a smooth shift from gas to electricity. Some of the insights we have gained from our pilot analysis were including both gender and Age in the preliminary questions would help us better understand our audience and that our exclusion criteria in the survey design should only be for underage individuals as we have limited resources for conducting surveys. The exclusion criteria of residence in the DMV region and Home Ownership should ideally be moved upstream to the respondents’ selection platform ie. MTurk</p>
+</section>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Cooking is an essential part of daily life, and the cooktop individuals choose can significantly impact their culinary experience. Whether an individual is a professional chef or simply enjoys preparing meals at home, their preferences for cooktop types can vary widely. On the other hand, the shift from traditional gas stoves to induction or electric stoves has been a rising debate among climate advocates who have been proposing a reduction of fossil fuel usage. Considering all these factors, the US government brought in a law <a href="https://www.democrats.senate.gov/imo/media/doc/inflation_reduction_act_of_2022.pdf">(Inflation Reduction Act 2022)</a> which amongst many other considerations is subsidies to homeowners who switch from gas to Electric/Induction Stoves.</p>
+<p>The motivation behind our study is the proposed shift from gas to electric/Induction and the practical challenges that will come during its implementation. There is a genuine individual safety concern with gas cooktops and their adverse effects on the environment, on the other hand, the concerns of the people who are being asked to switch are equally valid. The cost differential, reliability, and efficacy while preparing certain cuisines are just some of the primary concerns that come up when considering a transition from gas to electric/induction.</p>
+<section id="type-of-cooktops" class="level3">
+<h3 class="anchored" data-anchor-id="type-of-cooktops">Type of Cooktops:</h3>
+<ul>
+<li><p>Gas Cooktop - Gas Cooktops work on natural gas which is ignited and the flame itself is the source of heat. It was patented by James Sharp in England in 1826 and has been an integral part of most households since the 1920’s.</p></li>
+<li><p>Electric Cooktop - Electric cooktops have an electrical current that flows through a metal coil underneath the glass or ceramic surface. The coil becomes hot and starts glowing due to the electrical resistance. It will transfer its heat through the glass using infrared energy. It was patented in 1896 by William Hadaway.</p></li>
+<li><p>Induction Cooktop - Induction cooktops generate heat by combining electricity and the magnetic properties found in most pots and pans. Induction Cooktops were first released to the public at the Chicago “Century of Progress” World’s Fair in 1933.</p></li>
+</ul>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/wu1Rcfonxps" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="product-attributes-and-decision-variables" class="level3">
+<h3 class="anchored" data-anchor-id="product-attributes-and-decision-variables">Product Attributes and Decision Variables</h3>
+<p>We have limited our study to easily quantifiable attributes like Type of stove, Final Cost, Number of Burners, Average Annual Usage Cost, and Indoor Air Quality to understand user preferences as these are readily available and widely understandable. Reliability of technology and Cooking Efficacy are factors that are beyond the users’ control and that is why we have not considered those.</p>
+<table class="table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 16%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attributes</th>
+<th>Type</th>
+<th>Value / Range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cooktop Type</td>
+<td>Discrete</td>
+<td>Gas, Electric, Induction</td>
+</tr>
+<tr class="even">
+<td>Final Cost Price</td>
+<td>Continuous</td>
+<td>500, 700, 900, 1100, 1300, 1500</td>
+</tr>
+<tr class="odd">
+<td>Average Annual Usage Cost</td>
+<td>Continuous</td>
+<td>50, 60, 70, 80, 90, 100</td>
+</tr>
+<tr class="even">
+<td>Number of Burners</td>
+<td>Discrete</td>
+<td>3, 4, 5</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="survey-design" class="level1">
+<h1>Survey Design</h1>
+<section id="eligibility" class="level3">
+<h3 class="anchored" data-anchor-id="eligibility">Eligibility</h3>
+<p>Our eligibility criteria was Homeowners in US. We chose homeowners because Cooktops are bought by Homeowners and we wanted to gauge the preferences of the people. We had earlier thought about restricting ouselves to the DMV region but we could not find enough survey participants so we expanded our criteria. This was in addition to the necessary requirement of being over 18 and providing consent for the survey.</p>
+</section>
+<section id="respondent-information" class="level3">
+<h3 class="anchored" data-anchor-id="respondent-information">Respondent information</h3>
+<p>Along with the eligibility question, we were interested in obtaining information of people owning their household and how often they are cooking at home. We asked about the respondents’ Year of Birth, their place of residence, and their frequency of cooking. We also collected information about gender, salary range and if they have a gas connection in their homes.</p>
+</section>
+<section id="attributes-and-levels-for-conjoint-quesitons" class="level3">
+<h3 class="anchored" data-anchor-id="attributes-and-levels-for-conjoint-quesitons">Attributes and levels for Conjoint Quesitons:</h3>
+<p>Our conjoint questionnaire consisted of 8 questions after filtering out people from eligibility questions. Each question consists of 3 choices with each type of cooktop, final cost price, average annual usage cost and number of burners. After asking their preference questions, we asked for the heating efficiency and concerns of emissions from each respondent.</p>
+</section>
+<section id="educational-material-presented-to-the-respondents." class="level3">
+<h3 class="anchored" data-anchor-id="educational-material-presented-to-the-respondents.">Educational material presented to the respondents.</h3>
+<ul>
+<li>Cooktop type: Type of cooktop you prefer between gas, electric and induction.</li>
+<li>Final cost price: Total price to buy and setup the stove to get it running including taxes</li>
+<li>Average annual usage cost: Average price/yr to maintain the stove, like the price paid to gas or electricity</li>
+<li>Indoor air quality: Quality of the air in a home, school, office, or other building environment</li>
+<li>Number of burners in the cooktop: 3, 4, 5</li>
+<li>Emissions: Average amount of carbon emissions your stove will emit in a year</li>
+<li>Heating efficiency: This is time taken by the stove to reach cooking temperatures. Induction stoves take the shortest time to reach cooking temperature followed by electric and gas stoves.</li>
+<li>Induction cookware: Induction compatible cookware are required while using Induction stoves. You can tell if your cookware is suitable for induction cooking if it has a coil symbol on the base, or if a magnet clings firmly to the cookware’s underside. If you test a cookware and the magnet only sticks loosely to the base, you may find the cookware does not heat as effectively.</li>
+</ul>
+</section>
+<section id="example-figure-of-a-random-conjoint-question" class="level3">
+<h3 class="anchored" data-anchor-id="example-figure-of-a-random-conjoint-question">Example figure of a random Conjoint Question</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/tejasphirke/Cooktops/main/Final_images/sample_conjoint_question_image.JPG" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="data-analysis" class="level1">
+<h1>Data Analysis</h1>
+<section id="sample-description" class="level2">
+<h2 class="anchored" data-anchor-id="sample-description">Sample Description</h2>
+<p>We had 210 respondents for our survey who completed all the choice questions after filtering for consent and eligibility criteria. After that, we filtered out people who did not spend a reasonable time on the survey (those who went too fast), and we were left with 189 respondents. We further analyzed our respondents based on their demographics like age bracket, income range, and gender.</p>
+<table class="table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 62%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Demographic Variable</th>
+<th>Response Options</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gender</td>
+<td>Male, Female, Trans male/trans man, Trans female/trans woman Gender queer/gender non-conforming, prefer not to say</td>
+</tr>
+<tr class="even">
+<td>Education Level</td>
+<td>Less than High school, High School, Bachelor Degree, Masters Degree, Vocational, Associate Degree, Prefer not to say</td>
+</tr>
+<tr class="odd">
+<td>Income</td>
+<td>Less than $10,000, $10,000-$20,000, $50,001-$100,000, $100,001 or more, prefer not to say</td>
+</tr>
+<tr class="even">
+<td>Ethnicity</td>
+<td>Asian, African American or Black, White, Hispanic or Latino, American Indian or Alaska Native, Native Hawaiian or Pacific Islander, Prefer not to say</td>
+</tr>
+</tbody>
+</table>
+<p>Education Distribution:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>education_info <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"bs"</span>, <span class="st">"vocational"</span>, <span class="st">"college_some"</span>, <span class="st">"HighSchool"</span>, <span class="st">"grad"</span>, <span class="st">"associate"</span>, <span class="st">"N/A"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>number_of_people <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">84</span>, <span class="dv">6</span>, <span class="dv">24</span>, <span class="dv">17</span>, <span class="dv">33</span>, <span class="dv">24</span>, <span class="dv">1</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df_Education <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Education =</span> education_info, <span class="at">Count =</span> number_of_people)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_Education, <span class="fu">aes</span>(<span class="at">x=</span><span class="fu">reorder</span>(Education, <span class="sc">-</span>Count), <span class="at">y=</span>number_of_people)) <span class="sc">+</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">'identity'</span>)<span class="sc">+</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"grey"</span>) <span class="sc">+</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">'Edu Level'</span>, <span class="at">y =</span> <span class="st">'Count'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="figs/unnamed-chunk-3-1.png" class="img-fluid" width="696"></p>
+</div>
+</div>
+<p>Income Distribution:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>income_info <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"&lt;10"</span>, <span class="st">"20-50"</span>, <span class="st">"50-100"</span>, <span class="st">"&lt;100"</span>, <span class="st">"10-20"</span>, <span class="st">"N/A"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>number_of_people <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">46</span>, <span class="dv">80</span>, <span class="dv">50</span>, <span class="dv">7</span>, <span class="dv">1</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df_Income <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Income =</span> income_info, <span class="at">Count =</span> number_of_people)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_Income, <span class="fu">aes</span>(<span class="at">x=</span><span class="fu">reorder</span>(Income, <span class="sc">-</span>Count), <span class="at">y=</span>number_of_people)) <span class="sc">+</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">'identity'</span>)<span class="sc">+</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"grey"</span>) <span class="sc">+</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">'Income Level'</span>, <span class="at">y =</span> <span class="st">'Count'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="figs/unnamed-chunk-4-1.png" class="img-fluid" width="696"></p>
+</div>
+</div>
+<p>Based on our respondents distribution, we have highest percentage of bachelor’s degree, and</p>
+</section>
+<section id="data-cleaning" class="level2">
+<h2 class="anchored" data-anchor-id="data-cleaning">Data cleaning</h2>
+<ul>
+<li>We added formr respondents data per each survey.</li>
+<li>We combined them into one data frame</li>
+<li>We filtered out respondents who responded “No” to consent age and consent understanding</li>
+<li>We filtered out respondents who did not finish the survey.</li>
+<li>We filtered out respondents who replied too fast using the time column.</li>
+<li>We filter people who got our attention-check questions wrong</li>
+<li>The remaining data was our analysis and model-building data.</li>
+</ul>
+</section>
+<section id="modeling" class="level2">
+<h2 class="anchored" data-anchor-id="modeling">Modeling</h2>
+<p>For our final analysis, we have built multiple models which are listed below.</p>
+<section id="simple-logit-model" class="level3">
+<h3 class="anchored" data-anchor-id="simple-logit-model">Simple Logit Model</h3>
+<p>A simple preference based model with all features (Final Cost Price, Average Annual Cost Price, Number of Burners and Type of Cooktop)</p>
+<p><span class="math display">\[
+u_{j} = \beta_{1}x_{j}^{final\;cost\;price} + \beta_{2}x_{j}^{average\;annual\;usage\;cost}
++\beta_{3}\delta_{j}^{number\;of\;burners\;4}
++\beta_{4}\delta_{j}^{number\;of\;burners\;5}
++\beta_{5}\delta_{j}^{cooktop\;type\;electric}
++\beta_{6}\delta_{j}^{cooktop\;type\;induction}
+\]</span></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"./figs/model_simple_utility.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="./figs/model_simple_utility.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Observations:</p>
+<ul>
+<li>We observe a drop in utility with the increase in price for both “Final Cost of Burners” and “Average Annual Usage Costs” which is expected behavior.</li>
+<li>For the “# of Burners”, we can clearly see that there is a significant increase in utility from 3 stove burner to 4 stove burners but not so much while moving from 4 to 5 burners. We can infer from this that companies should focus more on 4 burners than 5 burners as the increase in utility is low.</li>
+<li>The final observation from the “Cooktop Type” graph is that utility for Induction stove is higher than electric and gas.</li>
+</ul>
+</section>
+<section id="mixed-logit-model" class="level3">
+<h3 class="anchored" data-anchor-id="mixed-logit-model">Mixed Logit Model</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"./figs/plot_mxl_wtp.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="./figs/plot_mxl_wtp.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Observations:</p>
+<ul>
+<li>Analyzing our model coefficients reveals that cooktops with 5 burners and electric functionality exhibit positive coefficients, indicating a preference among consumers.</li>
+<li>The average annual usage cost coefficient is around 0, and cooktops with 4 burners show negative coefficients. This suggests a consumer preference for 5 burners over fewer, and an inclination towards electric cooktops compared to other types.</li>
+<li>These findings underscore the significance of our analysis on cooktop type and the number of burners in influencing consumer preferences when purchasing cooktops.</li>
+</ul>
+</section>
+<section id="subgroup-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="subgroup-analysis">Subgroup Analysis</h3>
+<p>For subgroup analysis, we decided to identify two groups in data based on their educational qualifications. Those who completed their Master’s or bachelor’s degree were marked as ‘high’ in education level and others with lower educational qualifications were marked as ‘low’.</p>
+<p><u>Education Level - High</u></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"./figs/barplot_mnl_wtp_high.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="./figs/barplot_mnl_wtp_high.png" class="img-fluid"></p>
+</div>
+</div>
+<p><u>Education Level - Low</u></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"./figs/barplot_mnl_wtp_low.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="./figs/barplot_mnl_wtp_low.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Observations:</p>
+<ul>
+<li>There is a positive Willingness to Pay for 4 and 5 burner stoves in both lower and higher education groups.</li>
+<li>The negative Willingness to Pay for ‘Average Annual Usage Cost’ is more in lower education group which indicates they are willing to pay a “higher” total upfront cost to decrease their Average annual usage cost.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="results" class="level1">
+<h1>Results</h1>
+<section id="willingness-to-pay-model" class="level3">
+<h3 class="anchored" data-anchor-id="willingness-to-pay-model">Willingness to Pay Model</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"./figs/model_wtp_cooktop_4a.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="./figs/model_wtp_cooktop_4a.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"./figs/model_wtp_4a_barplot.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="./figs/model_wtp_4a_barplot.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Observations:</p>
+<ul>
+<li>From the WTP model, we can see that there is a strong negative WTP for ‘Average annual usage cost’ and the respondents are willing to pay a “higher” total upfront cost to decrease their Average annual usage cost.</li>
+<li>There is a significant WTP increase from 3 burner to 4 burner (roughly $250) but a small WTP increase from 4 burner to 5 burner.</li>
+<li>There is significant WTP increase from gas to Induction cooktop type (roughly $350) but a small WTP increase from gas to Electric burner.</li>
+</ul>
+</section>
+<section id="simulation" class="level2">
+<h2 class="anchored" data-anchor-id="simulation">Simulation</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"./figs/sim.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="./figs/sim.png" class="img-fluid"></p>
+</div>
+</div>
+<p>In the baseline case where we have taken the approximate average market price of each type of stove (gas $500, electric $800 and induction $1300), based on our model, the market share of Induction is close to 35% , gas ~25% and electric ~40%.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"./figs/sim_multi.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="./figs/sim_multi.png" class="img-fluid"></p>
+</div>
+</div>
+<p>In the above graph, we are showing three scenarios with different prices of the stoves (Gas, Electric and Induction) and their respective market shares.</p>
+</section>
+<section id="sensitivity-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="sensitivity-analysis">Sensitivity Analysis</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"./figs/share_price_plot.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="./figs/share_price_plot.png" class="img-fluid"></p>
+</div>
+</div>
+<p>The above plot is based on the simulation of the model based on the baseline. Final Cost Price decreases as price increases. The market share drops from 60% to 20% as we increase the price from $500 to $1500</p>
+</section>
+</section>
+<section id="final-recommendations-and-conclusions" class="level1">
+<h1>Final Recommendations and Conclusions</h1>
+<ul>
+<li>The change in utlity or increase in willingness to pay from 3 burner to 4 burner is much higher than 4 burner to 5 burner so companies should focus more on 4 burner stoves.</li>
+<li>There is a high willingness to pay for Induction Stoves compared to Gas stoves which indicates that consumers understand the benefits of Induction stove.</li>
+<li>The average price difference between induction and gas stove is still pretty high and the higher WTP does not cover it so a decrease in price or subsidy of Induction stoves will be required to increase the market share of Induction stoves to over 50%.</li>
+</ul>
+</section>
+<section id="limitations" class="level1">
+<h1>Limitations</h1>
+<ul>
+<li>If the sample size would have been larger than currently available data, analysis would have made much more sense with respect to decision making. The Power analysis we conducted showed us that we needed roughly 450 participants to validate our findings.</li>
+<li>Having region specific knowledge with respect to utilities and policies would have helped us tailor our survey in a much more granular level which will address the main problem.</li>
+<li>Having stringent guidelines on the target population of the survey respondents would have been better to receive more authentic data to analyze, for example taking the survey to people in person rather than doing it online.</li>
+</ul>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"./figs/power_analysis.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="./figs/power_analysis.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="attributes" class="level1">
+<h1>Attributes</h1>
+<p>All group members equally contributed.</p>
+</section>
+<section id="appendix" class="level1">
+<h1>Appendix</h1>
+<section id="welcome-to-our-survey" class="level2">
+<h2 class="anchored" data-anchor-id="welcome-to-our-survey">Welcome to our survey!</h2>
+<div class="justify">
+<p>Thank you for participating in this survey, which is part of a research effort by The George Washington University. For this survey, we will ask you about your preferences for different types of cooktops.</p>
+</div>
+<hr>
+</section>
+<section id="consent-form" class="level2">
+<h2 class="anchored" data-anchor-id="consent-form">Consent form</h2>
+<div class="justify">
+<p>This survey is being conducted by students at The George Washing University. We will not be collecting any identifying data, such as your name or address. The whole survey will take approximately 10 to 15 minutes to complete. Your participation is voluntary and you may stop the survey at any time.</p>
+</div>
+<p>If you would like to participate, please answer the following questions:</p>
+<p>I am age 18 or older</p>
+<ul>
+<li>Yes</li>
+<li>No</li>
+</ul>
+<p>I have read and understand the above information</p>
+<ul>
+<li>Yes</li>
+<li>No</li>
+</ul>
+<p>Do you own a home?</p>
+<ul>
+<li>Yes</li>
+<li>No</li>
+</ul>
+<hr>
+</section>
+<section id="thanks" class="level2">
+<h2 class="anchored" data-anchor-id="thanks">Thanks!</h2>
+<p>Now that you’ve shared a bit about yourself, we’d like you to consider that you can choose cooktops with different attributes.</p>
+<p>Let’s learn about these attributes.</p>
+<hr>
+</section>
+<section id="type" class="level2">
+<h2 class="anchored" data-anchor-id="type">Type</h2>
+<div class="justify">
+<p>Type refers to the type of cooktop. There are three types of cooktops as Gas, Electric and Induction cooktops</p>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 36%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Gas</th>
+<th style="text-align: center;">Electric</th>
+<th style="text-align: center;">Induction</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="https://raw.githubusercontent.com/tejasphirke/Cooktops/main/gas_stove.jpg" width="170" style="margin-right: 10px;"></td>
+<td style="text-align: center;"><img src="https://raw.githubusercontent.com/tejasphirke/Cooktops/main/electric_stove_edu.jpg" width="170" style="margin-right: 10px;"></td>
+<td style="text-align: center;"><img src="https://raw.githubusercontent.com/tejasphirke/Cooktops/main/induction_2.jpg" width="200"></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><strong>Gas Cooktop</strong> - Gas Cooktops work on natural gas which is ignited and the flame itself is the source of heat. It was patented by James Sharp in England in 1826 and has been an integral part of most households since the 1920s.</p>
+<p><strong>Electric Cooktop</strong> - Electric cooktops have an electrical current that flows through a metal coil underneath the glass or ceramic surface. The coil becomes hot and starts glowing due to the electrical resistance. It will transfer its heat through the glass using infrared energy. It was patented in 1896 by William Hadaway.</p>
+<p><strong>Induction Cooktop</strong> - Induction cooktops generate heat by combining electricity and the magnetic properties found in most pots and pans. Induction Cooktops were first released to the public at the Chicago “Century of Progress” World’s Fair in 1933</p>
+<p>Introduction video for understanding <strong>Induction Cooktop</strong> :</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/wu1Rcfonxps" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="attributes-information" class="level2">
+<h2 class="anchored" data-anchor-id="attributes-information">Attributes Information</h2>
+<section id="final-cost-price" class="level3">
+<h3 class="anchored" data-anchor-id="final-cost-price">Final Cost Price</h3>
+<ul>
+<li>Final Cost Price refers to the full price you will pay (including taxes) for the cooktops</li>
+</ul>
+</section>
+<section id="usage-cost" class="level3">
+<h3 class="anchored" data-anchor-id="usage-cost">Usage Cost</h3>
+<ul>
+<li>Usage Cost refers to average annual usage cost for particular type of cooktop</li>
+</ul>
+</section>
+<section id="indoor-air-quality" class="level3">
+<h3 class="anchored" data-anchor-id="indoor-air-quality">Indoor air Quality</h3>
+<ul>
+<li>Quality of air at home after using cooktop</li>
+</ul>
+</section>
+<section id="number-of-burners" class="level3">
+<h3 class="anchored" data-anchor-id="number-of-burners">number of burners</h3>
+<ul>
+<li>The number of burners for particular type of cooktop</li>
+</ul>
+<hr>
+<p>We’ll now begin the choice tasks. On the next few pages we will show you three types of cooktops and we’ll ask you to choose the one you most prefer.</p>
+<p>For example, if these were the only cooktops available, which would you choose?</p>
+<p>[mc_button type question with the following three options]</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-condensed table-sm small" data-quarto-postprocess="true">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Option:</td>
+<td style="text-align: left;">Option 1</td>
+<td style="text-align: left;">Option 2</td>
+<td style="text-align: left;">Option 3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><img src="https://raw.githubusercontent.com/tejasphirke/Cooktops/main/induction_stove_edu.jpg" class="img-fluid" width="200"></td>
+<td style="text-align: left;"><img src="https://raw.githubusercontent.com/tejasphirke/Cooktops/main/induction_stove_edu.jpg" class="img-fluid" width="200"></td>
+<td style="text-align: left;"><img src="https://raw.githubusercontent.com/tejasphirke/Cooktops/main/induction_stove_edu.jpg" class="img-fluid" width="200"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cost:</td>
+<td style="text-align: left;">$500</td>
+<td style="text-align: left;">$800</td>
+<td style="text-align: left;">$1,500</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Type:</td>
+<td style="text-align: left;">Induction</td>
+<td style="text-align: left;">Induction</td>
+<td style="text-align: left;">Induction</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">number of burners:</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">4</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="great-work" class="level2">
+<h2 class="anchored" data-anchor-id="great-work">Great work!</h2>
+<p>We will now show you 8 sets of choice questions starting on the next page.</p>
+<hr>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-condensed table-sm small" data-quarto-postprocess="true">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Option:</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><img src="https://raw.githubusercontent.com/tejasphirke/Cooktops/main/Final_images/g3.jpg" class="img-fluid" width="100"></td>
+<td style="text-align: left;"><img src="https://raw.githubusercontent.com/tejasphirke/Cooktops/main/Final_images/e5.jpg" class="img-fluid" width="100"></td>
+<td style="text-align: left;"><img src="https://raw.githubusercontent.com/tejasphirke/Cooktops/main/Final_images/i4.jpg" class="img-fluid" width="100"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cost:</td>
+<td style="text-align: left;">800</td>
+<td style="text-align: left;">800</td>
+<td style="text-align: left;">500</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cooktop Type:</td>
+<td style="text-align: left;">Gas</td>
+<td style="text-align: left;">Electric</td>
+<td style="text-align: left;">Induction</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Average Annual Usage Cost:</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">number of burners:</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">4</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<hr>
+</section>
+<section id="thank-you-for-your-feedback" class="level2">
+<h2 class="anchored" data-anchor-id="thank-you-for-your-feedback">Thank you for your feedback!</h2>
+<p>The next section will ask some basic questions about cooktops and air quality.</p>
+<p>Please answer to the best of your knowledge.</p>
+<p>We’re almost done! We’d just like to ask just a few more questions about you which we will only use for analyzing our survey data.</p>
+<ol type="1">
+<li>Do you have induction cookware? Different type of cooktops? (please state):</li>
+</ol>
+<ul>
+<li>Yes</li>
+<li>No</li>
+<li>Not aware</li>
+</ul>
+<ol start="2" type="1">
+<li>Are you concerned about the heating efficiency of your cooktop?</li>
+</ol>
+<ul>
+<li>Concerned</li>
+<li>Neutral</li>
+<li>Not aware</li>
+</ul>
+<ol start="3" type="1">
+<li>How concerned are you about carbon emission from cooktop?</li>
+</ol>
+<ul>
+<li>Concerned</li>
+<li>Neutral</li>
+<li>Not aware</li>
+</ul>
+<ol start="4" type="1">
+<li>How often do you cook?</li>
+</ol>
+<ul>
+<li>Often</li>
+<li>Sometimes</li>
+<li>Never</li>
+</ul>
+<ol start="5" type="1">
+<li>Which utilities do you have at your home?</li>
+</ol>
+<ul>
+<li>electricity</li>
+<li>gas</li>
+<li>not aware</li>
+</ul>
+</section>
+<section id="nice-job" class="level2">
+<h2 class="anchored" data-anchor-id="nice-job">Nice job!</h2>
+<p>We’re almost done! We’d just like to ask just a few more questions about you which we will only use for analyzing our survey data.</p>
+<ol type="1">
+<li>In what year were you born?</li>
+</ol>
+<p>(Drop down menu including <code>Prefer not to say</code> and years <code>1920</code> - <code>2003</code>)</p>
+<ol start="2" type="1">
+<li>What is your current gender identity? Different identity (please state):</li>
+</ol>
+<ul>
+<li>Male</li>
+<li>Female</li>
+<li>Trans male/ trans man</li>
+<li>Trans Female/ trans woman</li>
+<li>Gender queer/ gender non-conforming</li>
+<li>Prefer not to say</li>
+</ul>
+<p>(3)I identify my race as (select all that apply): Different identity (please state):</p>
+<ul>
+<li>Asian</li>
+<li>African American or Black</li>
+<li>White (not of Hispanic or Latino origin)</li>
+<li>Hispanic or Latino</li>
+<li>American Indian or Alaska Native</li>
+<li>Native Hawaiian or Pacific Islander</li>
+<li>Prefer not to say</li>
+</ul>
+<ol start="4" type="1">
+<li>What is the highest degree or level of school you have completed? If currently enrolled, please use the highest degree received.</li>
+</ol>
+<ul>
+<li>Less than a high school diploma</li>
+<li>High school degree or equivalent (e.g.&nbsp;GED)</li>
+<li>Some college or univeristy, no college degree</li>
+<li>Trade/technical/vocational training, no degree awarded</li>
+<li>Associate’s degree (e.g.&nbsp;AA, AS)</li>
+<li>Bachelor’s degree (e.g.&nbsp;BA, BS)</li>
+<li>Graduate or Professional Degree (e.g.&nbsp;PhD, MD, JD, MS)</li>
+<li>Prefer not to say</li>
+</ul>
+<ol start="5" type="1">
+<li>What is your annual household income (from all sources) before taxes and other deductions from pay?</li>
+</ol>
+<ul>
+<li>Less than $10,000</li>
+<li>$10,000 - $19,999</li>
+<li>$20,000 - $49,999</li>
+<li>$50,000 - $99,999</li>
+<li>More than 100,000</li>
+<li>Prefer not to say</li>
+</ul>
+<ol start="6" type="1">
+<li>What is your Zipcode?</li>
+</ol>
+<p>(Open text response)</p>
+<p>Please let us know if you have any other thoughts or feedback on this survey.</p>
+<p>Your feedback will help us make future improvements :)</p>
+<p>(Open text response)</p>
+<hr>
+<section id="your-completion-code-is-7.098975" class="level3">
+<h3 class="anchored" data-anchor-id="your-completion-code-is-7.098975">Your completion code is: 7.09897^{5}</h3>
+<p>Finish</p>
+<p>SURVEY LINK: [COOKTOP SURVEY LINK(“https://cooktop-final.formr.org/”)</p>
+</section>
+</section>
+</section>
+<section id="acknowledgement" class="level1">
+<h1>Acknowledgement</h1>
+<p>A special thank you is extended to Dr.&nbsp;John Paul Helveston for his support throughout this research project.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

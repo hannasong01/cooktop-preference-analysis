@@ -1,0 +1,10 @@
+altID,obsID,final_cost_price,average_annual_usage_cost,cooktop_type_electric,cooktop_type_induction,number_of_burners_4,number_of_burners_5,header
+1,1,500,100,0,0,1,0,gas_500
+2,1,800,50,1,0,1,0,electric_800
+3,1,1300,50,0,1,1,0,induction_1300
+1,2,500,100,0,0,1,0,gas_500
+2,2,800,50,1,0,1,0,electric_800
+3,2,800,50,0,1,1,0,induction_800
+1,3,600,100,0,0,1,0,gas_600
+2,3,600,50,1,0,1,0,electric_600
+3,3,600,50,0,1,1,0,induction_600

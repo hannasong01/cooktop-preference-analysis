@@ -1,0 +1,191 @@
+time_sec_p1,ownhome,time_sec_p2,respondentID,cbcPractice,cbc1,cbc2,cbc3,cbc4,cbc5,cbc6,cbc7,cbc8,cbcAllSame,time_sec_p3,induction,heatingeff,carbon,oftencook,utility,yearOfBirth,gender,race,raceOther,education,income,zipcode,age_in_years,feedback,time_min_total
+7,1,167,583,1,1,3,3,1,2,3,2,2,0,51,Yes,Concerned,Concerned,often,gas,1984,female,asian,NA,degree_bs,under10,47130,39,NA,3.75
+13,1,235,529,1,3,2,3,1,3,3,1,2,0,0,Yes,Neutral,Neutral,often,"electricity, gas",1989,male,asian,NA,degree_bs,inc_20to50,19103,34,NA,4.133333333333334
+973,1,246,634,2,3,3,2,2,2,2,2,3,0,61,Yes,Neutral,Neutral,sometimes,electricity,1993,female,"white, hispanic",NA,degree_bs,inc_20to50,28372,30,NA,21.333333333333332
+19,1,329,699,2,3,1,3,2,2,3,3,2,0,356,Yes,Concerned,Neutral,sometimes,electricity,1995,female,black,NA,degree_bs,inc_50to100,77067,28,Thank you,11.733333333333333
+28,1,266,548,2,2,3,2,3,3,3,2,2,0,121,not_aware,Not_Bothered,Neutral,sometimes,electricity,1966,female,white,NA,vocational,inc_above100,33556,57,NA,6.916666666666667
+8,1,142,495,2,3,2,2,3,2,3,2,3,0,63,Yes,Not_Bothered,Not_Bothered,often,electricity,1981,male,white,NA,college_some,inc_above100,90210,42,NA,3.55
+27,1,312,84,1,1,2,2,1,2,2,3,2,0,88,Yes,Neutral,Not_Bothered,sometimes,"electricity, gas",1969,male,white,NA,hs,inc_10to20,76360,54,NA,7.116666666666666
+63,1,186,653,1,3,3,3,1,1,1,3,1,0,129,No,Not_Bothered,Neutral,sometimes,gas,1988,genderNonconform,white,NA,degree_bs,inc_20to50,14445,35,NA,6.3
+12,1,261,466,2,2,1,1,1,2,3,3,3,0,76,No,Not_Bothered,Not_Bothered,often,"electricity, gas",1982,female,asian,NA,hs,inc_20to50,30215,41,Thank you for the survey,5.816666666666666
+13,1,242,331,2,3,3,3,2,3,2,2,2,0,0,not_aware,Not_Bothered,Concerned,sometimes,"electricity, gas",1977,female,white,NA,degree_bs,inc_above100,83687,46,NA,4.25
+25,1,321,212,1,1,1,1,1,1,1,1,1,1,131,No,Not_Bothered,Not_Bothered,often,"electricity, gas",1973,male,white,NA,degree_grad,inc_above100,38104,50,NA,7.95
+13,1,198,447,2,3,3,1,1,2,3,3,3,0,75,Yes,Neutral,Neutral,often,electricity,1989,female,black,NA,degree_bs,inc_20to50,37042,34,NA,4.766666666666667
+17,1,206,791,3,3,3,3,3,2,3,2,3,0,65,No,Not_Bothered,Not_Bothered,sometimes,electricity,1992,male,asian,NA,college_some,inc_20to50,77042,31,NA,4.8
+10,1,581,653,1,2,3,2,1,1,1,1,1,0,92,No,Not_Bothered,Not_Bothered,sometimes,electricity,1981,female,hispanic,NA,degree_associate,inc_20to50,78521,42,NA,11.383333333333333
+32,1,1212,781,1,1,1,3,1,1,3,3,1,0,86,Yes,Concerned,Not_Bothered,sometimes,"electricity, gas",1957,female,white,NA,degree_bs,inc_50to100,28562,66,NA,22.166666666666668
+30,1,327,116,1,2,2,2,2,2,2,2,2,1,63,No,Neutral,Concerned,often,electricity,1996,male,hispanic,NA,hs,inc_20to50,30427,27,NA,7
+40,1,212,191,1,3,2,2,1,2,2,2,2,0,50,not_aware,Concerned,Not_Bothered,sometimes,"electricity, gas",1976,female,white,NA,college_some,inc_20to50,43920,47,NA,5.033333333333333
+43,1,326,531,1,3,3,3,2,2,3,3,3,0,125,Yes,Neutral,Neutral,sometimes,"electricity, gas",1959,female,white,NA,degree_bs,inc_10to20,44144,64,NA,8.233333333333333
+31,1,313,607,3,3,3,3,3,3,3,3,3,1,112,Yes,Concerned,Not_Bothered,often,"electricity, gas",1978,female,white,NA,degree_bs,inc_20to50,67204,45,NA,7.6
+12,1,193,246,3,3,2,2,3,3,3,2,3,0,62,No,Concerned,Neutral,sometimes,electricity,1983,female,asian,NA,degree_grad,inc_above100,96822,40,NA,4.45
+23,1,181,827,1,3,3,3,1,3,1,3,1,0,69,No,Not_Bothered,Not_Bothered,often,gas,1993,female,white,NA,degree_associate,inc_50to100,49509,30,NA,4.55
+19,1,187,297,2,3,3,3,3,3,2,3,2,0,66,No,Neutral,Concerned,often,electricity,1957,female,white,NA,degree_associate,inc_50to100,76207,66,NA,4.533333333333333
+36,1,358,532,2,2,2,2,2,2,2,2,2,1,148,No,Concerned,Not_Bothered,often,electricity,1971,male,"black, hispanic",NA,vocational,inc_20to50,33015,52,NA,9.033333333333333
+28,1,185,159,3,3,3,3,3,3,3,3,3,1,63,Yes,Neutral,Neutral,often,"electricity, gas",1970,female,white,NA,degree_bs,inc_20to50,24019,53,NA,4.6
+24,1,316,912,2,3,2,3,3,2,2,3,3,0,87,Yes,Concerned,Not_Bothered,sometimes,electricity,1963,male,white,NA,degree_grad,inc_above100,76020,60,NA,7.116666666666666
+16,1,230,68,3,3,3,2,3,3,3,2,2,0,57,No,Not_Bothered,Not_Bothered,often,"electricity, gas",1972,female,white,NA,degree_grad,inc_50to100,08068,51,NA,5.05
+25,1,425,393,1,2,1,2,1,2,3,1,1,0,104,No,Not_Bothered,Neutral,often,gas,1993,female,hispanic,NA,degree_bs,inc_above100,92870,30,NA,9.233333333333333
+77,1,361,887,2,2,3,1,3,1,3,1,3,0,0,Yes,Concerned,Concerned,often,"electricity, gas",1989,male,white,NA,degree_bs,inc_50to100,18078,34,NA,7.3
+10,1,239,626,2,2,1,3,2,3,2,3,3,0,79,No,Concerned,Neutral,often,electricity,1978,female,white,NA,degree_associate,inc_20to50,75462,45,NA,5.466666666666667
+66,1,164,853,3,3,3,3,3,3,3,3,3,1,70,Yes,Not_Bothered,Concerned,often,"electricity, gas",1988,male,white,NA,degree_grad,inc_above100,80014,35,NA,5
+13,1,211,651,2,3,2,3,3,3,3,2,2,0,98,No,Neutral,Neutral,often,electricity,1976,female,hispanic,NA,college_some,inc_20to50,78582,47,Wow I’ve never heard of induction burners hmm sounds interesting,5.366666666666666
+42,1,335,920,1,1,2,3,1,1,2,1,3,0,64,No,Not_Bothered,Concerned,often,gas,1977,male,hispanic,NA,degree_grad,inc_above100,77539,46,NA,7.35
+25,1,223,380,1,2,3,1,1,3,3,1,1,0,59,not_aware,Not_Bothered,Not_Bothered,often,electricity,1971,female,white,NA,degree_bs,inc_above100,49684,52,NA,5.116666666666666
+492,1,518,247,1,3,1,3,2,2,1,1,1,0,68,Yes,Not_Bothered,Concerned,often,"electricity, gas",1986,transMale,white,NA,hs,inc_10to20,62865,37,I genuinely enjoyed participating. Loved the images of the stovetops and the descriptions. I learned something today! Thank you so much.,17.966666666666665
+25,1,295,199,1,1,1,1,3,1,1,3,2,0,88,No,Not_Bothered,Concerned,sometimes,"electricity, gas",1982,female,white,NA,degree_associate,inc_50to100,49684,41,NA,6.8
+38,1,245,406,1,1,3,1,3,3,2,1,1,0,135,No,Not_Bothered,Not_Bothered,often,"electricity, gas",1980,female,white,NA,college_some,inc_50to100,31088,43,NA,6.966666666666667
+25,1,156,943,3,3,3,3,3,3,3,3,3,1,72,Yes,Neutral,Concerned,often,"electricity, gas",1954,male,white,NA,degree_bs,inc_above100,95758,69,NA,4.216666666666667
+39,1,312,787,2,1,3,3,2,1,2,3,3,0,57,No,Neutral,Neutral,often,"electricity, gas",1973,female,white,NA,degree_associate,inc_above100,98077,50,NA,6.8
+13,1,651,875,1,3,3,3,3,1,1,3,1,0,40,No,Not_Bothered,Not_Bothered,often,gas,1986,male,black,NA,degree_bs,inc_20to50,15132,37,NA,11.733333333333333
+292,1,414,127,2,3,3,2,3,2,3,2,3,0,148,No,Not_Bothered,Neutral,sometimes,electricity,1954,female,white,NA,hs,inc_10to20,27520,69,NA,14.233333333333333
+18,1,190,390,1,3,3,3,3,1,1,3,3,0,49,No,Concerned,Neutral,sometimes,gas,1985,male,white,NA,degree_grad,inc_above100,46321,38,NA,4.283333333333333
+16,1,173,346,1,3,1,3,1,1,1,3,1,0,60,Yes,Concerned,Neutral,often,"electricity, gas",1969,male,white,NA,degree_grad,inc_above100,55448,54,NA,4.15
+20,1,272,745,2,2,2,2,3,2,3,2,2,0,147,Yes,Not_Bothered,Not_Bothered,often,"electricity, gas",1965,female,white,NA,degree_bs,inc_50to100,32514,58,NA,7.316666666666666
+14,1,192,356,2,2,2,3,3,3,2,3,2,0,59,not_aware,Not_Bothered,Concerned,often,"electricity, gas",1968,female,"asian, white",NA,degree_associate,inc_above100,36116,55,NA,4.416666666666667
+11,1,219,931,1,2,3,3,3,2,3,2,1,0,68,No,Concerned,Concerned,often,"electricity, gas",1953,male,white,NA,degree_bs,inc_20to50,95446,70,NA,4.966666666666667
+16,1,241,313,1,3,3,2,2,1,3,3,2,0,61,Yes,Neutral,Concerned,often,"electricity, gas",1955,male,white,NA,college_some,inc_50to100,95823,68,NA,5.3
+24,1,339,663,2,2,3,2,2,2,1,2,2,0,0,No,Concerned,Concerned,sometimes,electricity,1983,male,white,NA,degree_bs,inc_50to100,18078,40,NA,6.05
+23,1,291,924,1,3,1,1,1,3,1,1,3,0,102,Yes,Concerned,Neutral,often,"electricity, gas",1958,female,white,NA,degree_associate,inc_50to100,85937,65,NA,6.933333333333334
+24,1,134,373,2,3,2,3,3,3,3,3,3,0,52,not_aware,Not_Bothered,Not_Bothered,often,electricity,1983,female,white,NA,degree_grad,inc_above100,36265,40,NA,3.5
+13,1,155,347,1,3,1,1,3,3,3,3,3,0,57,No,Concerned,Neutral,often,gas,1963,female,white,NA,degree_associate,inc_50to100,21740,60,NA,3.75
+15,1,319,356,2,2,3,3,3,3,3,3,3,0,72,No,Not_Bothered,Concerned,sometimes,"electricity, gas",1975,female,native,NA,degree_grad,inc_above100,55805,48,NA,6.766666666666667
+15,1,201,26,1,1,2,3,2,2,3,1,2,0,57,No,Concerned,Neutral,sometimes,"electricity, gas",1980,female,white,NA,college_some,inc_50to100,32060,43,NA,4.55
+13,1,207,574,2,2,1,2,3,3,3,2,3,0,98,Yes,Not_Bothered,Not_Bothered,often,electricity,1985,prefer_not_say,white,NA,degree_bs,inc_50to100,27104,38,NA,5.3
+14,1,187,645,2,2,3,3,3,3,3,2,3,0,102,No,Not_Bothered,Not_Bothered,often,"electricity, gas",1961,female,hispanic,NA,degree_bs,inc_50to100,65270,62,NA,5.05
+21,1,179,830,3,3,2,3,2,3,2,3,3,0,66,not_aware,Neutral,Neutral,often,electricity,1965,female,white,NA,vocational,inc_20to50,31093,58,NA,4.433333333333334
+38,1,179,181,1,3,2,2,2,2,3,3,3,0,57,Yes,Not_Bothered,Neutral,often,electricity,1969,male,white,NA,degree_grad,inc_above100,33139,54,NA,4.566666666666666
+72,1,217,315,3,3,3,3,2,2,3,2,3,0,211,Yes,Concerned,Concerned,often,"electricity, gas",1974,female,white,NA,degree_grad,inc_above100,36695,49,NA,8.333333333333334
+17,1,359,127,1,1,3,1,3,1,3,2,3,0,94,No,Not_Bothered,Not_Bothered,sometimes,gas,1975,male,white,NA,college_some,inc_20to50,58503,48,NA,7.833333333333333
+14,1,153,902,2,3,3,2,3,3,3,2,3,0,52,No,Not_Bothered,Not_Bothered,often,electricity,1972,female,white,NA,degree_bs,inc_above100,19335,51,NA,3.65
+70,1,420,332,1,2,2,2,3,1,1,3,2,0,126,not_aware,Neutral,Not_Bothered,sometimes,"electricity, gas",1974,male,hispanic,NA,degree_bs,inc_above100,90602,49,Study ran smoothly with no technical issues.  I appreciate the opportunity to participate in your research.,10.266666666666667
+24,1,229,561,1,2,1,2,1,1,1,1,1,0,77,No,Not_Bothered,Not_Bothered,sometimes,electricity,1981,male,white,NA,degree_grad,inc_50to100,83873,42,NA,5.5
+35,1,277,254,1,3,3,3,3,3,3,3,3,1,122,not_aware,Not_Bothered,Neutral,often,gas,1992,female,hispanic,NA,degree_bs,inc_above100,34231,31,NA,7.233333333333333
+21,1,154,169,2,2,3,3,3,3,3,3,3,0,85,not_aware,Concerned,Neutral,sometimes,electricity,1977,male,white,NA,degree_bs,inc_above100,43535,46,NA,4.333333333333333
+24,1,208,709,1,3,3,1,1,1,3,3,1,0,89,No,Not_Bothered,Neutral,often,"electricity, gas",1989,female,prefer_not_say,mix,degree_grad,inc_50to100,07748,34,NA,5.35
+13,1,168,219,2,3,2,2,3,2,2,2,2,0,36,No,Neutral,Concerned,often,electricity,1994,female,asian,NA,degree_bs,inc_50to100,22079,29,NA,3.6166666666666667
+15,1,204,311,2,2,2,2,2,2,2,2,2,1,84,No,Not_Bothered,Concerned,often,electricity,1962,female,white,NA,degree_bs,inc_20to50,34748,61,NA,5.05
+20,1,253,786,1,2,3,2,2,2,2,2,2,0,137,Yes,Neutral,Not_Bothered,often,"electricity, gas",1957,male,"white, native",NA,hs,under10,75803,66,NA,6.833333333333333
+20,1,243,534,1,1,3,1,3,3,1,1,1,0,68,Yes,Not_Bothered,Not_Bothered,often,"electricity, gas",1966,male,white,NA,degree_bs,inc_50to100,73096,57,NA,5.516666666666667
+22,1,276,818,1,1,1,1,2,2,1,1,1,0,0,No,Neutral,Not_Bothered,often,electricity,1942,male,white,NA,degree_grad,inc_20to50,46725,81,NA,4.966666666666667
+30,1,215,583,2,3,3,3,3,3,3,2,2,0,76,No,Not_Bothered,Not_Bothered,often,electricity,1999,male,white,NA,degree_associate,inc_20to50,72120,24,NA,5.35
+13,1,128,349,2,3,3,3,3,3,3,3,3,1,111,No,Not_Bothered,Not_Bothered,often,"electricity, gas",1965,male,white,NA,degree_associate,inc_50to100,89052,58,NA,4.2
+21,1,275,706,1,2,2,3,1,2,2,3,3,0,77,No,Concerned,Concerned,sometimes,"electricity, gas",1963,female,"white, hispanic",NA,degree_associate,inc_above100,98065,60,NA,6.216666666666667
+11,1,149,541,1,1,1,1,1,1,1,1,1,1,43,No,Neutral,Not_Bothered,often,"electricity, gas",1987,male,white,NA,degree_grad,inc_above100,27707,36,NA,3.3833333333333333
+7,1,213,537,1,2,1,2,1,2,1,1,3,0,128,No,Concerned,Neutral,often,gas,1987,male,asian,NA,degree_bs,inc_50to100,19012,36,NA,5.8
+13,1,137,256,1,1,1,1,1,1,1,1,1,1,78,No,Neutral,Neutral,sometimes,"electricity, gas",1961,female,white,NA,degree_grad,inc_50to100,46342,62,NA,3.8
+25,1,301,712,1,3,1,1,1,2,1,1,1,0,47,not_aware,Concerned,Concerned,often,"electricity, gas",1994,male,hispanic,NA,degree_bs,inc_10to20,77053,29,Very interesting survey,6.216666666666667
+18,1,156,969,1,1,1,1,1,1,1,1,1,1,80,No,Neutral,Neutral,often,"electricity, gas",1958,female,white,NA,degree_bs,inc_50to100,63301,65,NA,4.233333333333333
+19,1,235,21,2,2,2,3,3,1,2,3,3,0,133,not_aware,Neutral,Not_Bothered,often,electricity,1964,male,white,NA,degree_bs,inc_20to50,98516,59,"1) It's expensive to run gas lines, even if you have existing gas service for your water heater.. 2) The price of gas has gone up quite a bit.",6.45
+604,1,305,326,1,3,2,1,1,3,1,2,2,0,70,No,Concerned,Not_Bothered,often,"electricity, gas",1968,male,asian,NA,degree_grad,inc_50to100,95831,55,NA,16.316666666666666
+23,1,209,115,1,3,3,3,3,1,1,3,1,0,83,Yes,Neutral,Concerned,sometimes,"electricity, gas",1954,female,white,NA,degree_associate,inc_20to50,39452,69,NA,5.25
+11,1,142,220,2,2,3,3,3,3,2,3,3,0,66,No,Neutral,Concerned,often,electricity,1987,male,white,NA,hs,inc_50to100,77336,36,NA,3.65
+20,1,244,921,2,2,2,2,2,3,2,2,2,0,87,Yes,Not_Bothered,Not_Bothered,often,"electricity, gas",1980,female,white,NA,degree_grad,inc_50to100,02888,43,NA,5.85
+58,1,260,414,3,3,3,3,3,3,3,3,3,1,109,Yes,Concerned,Concerned,often,electricity,1968,female,white,NA,hs,inc_20to50,33905,55,NA,7.116666666666666
+36,1,191,248,1,1,3,1,1,1,1,1,1,0,69,not_aware,Not_Bothered,Neutral,often,"electricity, gas",1983,female,white,NA,degree_bs,inc_50to100,49451,40,NA,4.933333333333334
+27,1,220,32,2,2,2,3,2,3,1,2,2,0,89,Yes,Not_Bothered,Not_Bothered,often,electricity,1986,male,white,NA,hs,inc_50to100,96094,37,Everything went perfect great study enjoyed taking it.,5.6
+18,1,120,994,2,3,3,2,1,3,3,3,1,0,72,No,Not_Bothered,Not_Bothered,sometimes,electricity,1982,prefer_not_say,prefer_not_say,NA,prefer_not_say,prefer_not_say,92555,41,NA,3.5
+59,1,438,289,1,2,2,2,3,2,2,3,2,0,124,Yes,Not_Bothered,Not_Bothered,often,electricity,1978,male,white,NA,college_some,under10,30735,45,NA,10.35
+13,1,137,468,1,1,1,1,1,1,1,1,1,1,50,No,Not_Bothered,Not_Bothered,often,"electricity, gas",1968,female,white,NA,degree_grad,inc_above100,20814,55,NA,3.3333333333333335
+39,1,277,243,1,3,3,3,2,3,3,3,3,0,101,Yes,Not_Bothered,Not_Bothered,often,"electricity, gas",1972,male,white,NA,degree_grad,inc_above100,NA,51,NA,6.95
+21,1,242,1000,2,3,3,3,3,1,2,1,2,0,60,No,Neutral,Concerned,often,electricity,1980,male,white,NA,degree_bs,inc_above100,17814,43,NA,5.383333333333334
+30,1,228,865,1,1,1,3,1,3,1,3,3,0,62,not_aware,Neutral,Not_Bothered,often,gas,1967,female,white,NA,college_some,inc_20to50,99688,56,NA,5.333333333333333
+28,1,380,972,1,3,2,1,2,1,3,3,3,0,86,No,Not_Bothered,Not_Bothered,often,electricity,1953,female,white,NA,hs,inc_20to50,60452,70,NA,8.233333333333333
+44,1,810,176,2,2,3,3,2,3,3,2,3,0,114,No,Neutral,Not_Bothered,often,"electricity, gas",1979,female,white,NA,college_some,inc_50to100,26456,44,NA,16.133333333333333
+34,1,639,729,2,2,2,2,3,2,3,2,3,0,0,No,Concerned,Not_Bothered,sometimes,"electricity, gas",1983,female,white,NA,degree_bs,inc_50to100,95821,40,NA,11.216666666666667
+9,1,246,752,1,2,3,1,2,3,2,2,3,0,49,No,Neutral,Neutral,sometimes,gas,1993,female,white,NA,degree_bs,inc_50to100,13512,30,NA,5.066666666666666
+19,1,165,325,1,1,1,1,1,1,1,1,1,1,93,No,Concerned,Neutral,often,gas,1970,female,white,NA,college_some,inc_20to50,70560,53,NA,4.616666666666666
+51,1,529,221,1,2,3,2,2,3,3,2,3,0,91,Yes,Not_Bothered,Not_Bothered,often,"electricity, gas",1960,male,white,NA,degree_bs,inc_20to50,02886,63,NA,11.183333333333334
+136,1,475,743,2,2,3,3,3,3,2,3,3,0,362,Yes,Concerned,Neutral,often,electricity,1965,female,white,NA,degree_bs,under10,75243,58,NA,16.216666666666665
+35,1,227,263,3,3,3,3,3,3,3,3,3,1,149,Yes,Not_Bothered,Not_Bothered,often,electricity,1968,male,white,NA,degree_bs,inc_50to100,03867,55,NA,6.85
+19,1,166,352,2,2,2,2,2,2,2,2,2,1,157,No,Neutral,Neutral,often,electricity,1960,male,white,NA,hs,inc_20to50,NA,63,"Hi, I've been cooking with electric ranges for the last 35 years and would not change for nothing including cost.",5.7
+25,1,392,139,2,2,3,3,2,3,3,3,3,0,72,No,Neutral,Neutral,sometimes,"electricity, gas",1983,female,white,NA,college_some,inc_20to50,01089,40,NA,8.15
+18,1,225,180,1,2,3,3,3,3,2,1,3,0,95,not_aware,Not_Bothered,Neutral,sometimes,"electricity, gas",1960,female,white,NA,degree_bs,inc_50to100,89123,63,NA,5.633333333333334
+23,1,110,920,1,1,1,1,1,1,1,1,1,1,89,not_aware,Concerned,Neutral,often,electricity,1962,female,black,NA,degree_bs,inc_above100,19701,61,NA,3.7
+16,1,185,701,1,1,3,2,1,2,1,1,3,0,43,No,Not_Bothered,Not_Bothered,often,electricity,1993,female,white,NA,college_some,inc_50to100,64151,30,NA,4.066666666666666
+194,1,1031,514,1,2,1,3,1,2,2,2,1,0,52,No,Not_Bothered,Not_Bothered,sometimes,electricity,1981,male,white,NA,vocational,inc_50to100,45805,42,NA,21.283333333333335
+44,1,160,101,3,3,3,3,3,2,3,3,3,0,139,Yes,Neutral,Concerned,often,electricity,1988,male,white,NA,degree_bs,inc_above100,85715,35,it was good,5.716666666666667
+48,1,283,363,2,1,3,3,2,1,2,3,3,0,204,No,Neutral,Not_Bothered,often,electricity,1967,female,white,NA,degree_bs,inc_20to50,28532,56,"My only feedback is that when you were explaining the different types of cooktops (gas, electric, and induction), you showed a coil top electric cooktop. Many if not most
+electric cooktops are ceramic/glass smooth tops that look more like induction top than like coil top, so you may want to point out electric come in smooth top, too so people don't confuse it with induction.",8.916666666666666
+14,1,452,634,1,2,3,1,1,1,2,2,2,0,64,Yes,Not_Bothered,Concerned,often,"electricity, gas",1951,female,white,NA,hs,inc_10to20,62865,72,Very interesting survey! I really enjoyed the topic and felt it was a good use of my time. Thank you so much!,8.833333333333334
+139,1,595,982,1,2,1,3,1,2,3,2,2,0,0,No,Concerned,Concerned,often,electricity,1982,female,asian,NA,degree_bs,inc_20to50,32255,41,NA,12.233333333333333
+15,1,189,454,1,1,3,3,1,3,3,3,1,0,42,not_aware,Neutral,Not_Bothered,often,"electricity, gas",1964,female,white,NA,degree_bs,inc_above100,48334,59,NA,4.1
+13,1,144,987,2,2,2,2,3,2,3,3,2,0,61,No,Not_Bothered,Not_Bothered,often,electricity,1956,female,white,NA,hs,inc_20to50,33903,67,NA,3.6333333333333333
+18,1,270,952,1,2,2,2,2,2,3,3,2,0,83,Yes,Neutral,Neutral,often,electricity,1965,male,white,NA,degree_bs,inc_50to100,32174,58,NA,6.183333333333334
+19,1,308,635,2,2,3,2,2,2,3,3,2,0,115,No,Neutral,Concerned,often,electricity,1961,female,black,NA,hs,inc_20to50,16602,62,NA,7.366666666666666
+21,1,264,363,2,2,2,3,2,2,2,2,3,0,76,No,Not_Bothered,Not_Bothered,never,electricity,1956,male,white,NA,degree_associate,inc_20to50,32246,67,NA,6.016666666666667
+26,1,154,99,1,3,1,3,3,3,3,3,3,0,85,Yes,Neutral,Not_Bothered,often,electricity,1975,male,white,NA,degree_grad,inc_50to100,28211,48,NA,4.416666666666667
+19,1,192,518,1,1,1,3,3,1,3,1,1,0,69,Yes,Not_Bothered,Neutral,sometimes,"electricity, gas",1961,female,white,NA,degree_grad,under10,97219,62,NA,4.666666666666667
+13,1,213,496,2,3,2,3,3,2,2,1,2,0,47,No,Neutral,Not_Bothered,often,electricity,1957,female,white,NA,degree_bs,inc_above100,42164,66,NA,4.55
+15,1,249,77,1,1,3,1,3,3,3,3,1,0,65,not_aware,Neutral,Neutral,sometimes,"electricity, gas",1973,male,white,NA,degree_grad,inc_above100,20148,50,NA,5.483333333333333
+13,1,206,866,3,3,3,3,3,3,3,3,3,1,0,Yes,Concerned,Concerned,sometimes,"electricity, gas",1988,male,black,NA,degree_bs,inc_above100,29461,35,NA,3.65
+16,1,203,838,1,1,2,1,3,3,1,3,2,0,61,No,Not_Bothered,Neutral,often,"electricity, gas",1979,female,white,NA,degree_bs,inc_above100,15238,44,NA,4.666666666666667
+26,1,380,69,1,3,3,2,3,2,2,3,3,0,110,not_aware,Concerned,Concerned,sometimes,"electricity, gas",1952,male,white,NA,degree_grad,inc_50to100,94070,71,NA,8.6
+24,1,699,61,2,3,3,3,3,3,2,3,3,0,66,No,Not_Bothered,Not_Bothered,sometimes,"electricity, gas",1981,female,white,NA,degree_associate,inc_50to100,24739,42,NA,13.15
+28,1,232,180,1,2,3,3,3,3,2,1,3,0,115,Yes,Neutral,Not_Bothered,often,electricity,1973,male,white,NA,college_some,inc_50to100,37327,50,I have one and I and love my induction cooktop.,6.25
+33,1,359,43,2,2,3,1,2,1,1,3,2,0,108,No,Not_Bothered,Neutral,often,electricity,1954,female,white,NA,vocational,inc_50to100,27546,69,NA,8.333333333333334
+17,1,249,745,2,3,2,2,3,2,3,2,2,0,60,No,Neutral,Neutral,sometimes,electricity,1957,male,white,NA,degree_grad,inc_50to100,46237,66,NA,5.433333333333334
+8,1,105,633,1,3,3,3,3,3,2,3,2,0,140,Yes,Neutral,Neutral,often,"electricity, gas",2004,male,asian,NA,college_some,inc_50to100,37027,19,NA,4.216666666666667
+26,1,303,363,1,1,3,3,1,3,3,3,3,0,69,No,Not_Bothered,Not_Bothered,often,gas,1984,male,white,NA,degree_bs,inc_50to100,1662,39,NA,6.633333333333334
+42,1,189,720,2,3,3,3,3,2,3,3,3,0,95,Yes,Not_Bothered,Not_Bothered,often,"electricity, gas",1970,female,hispanic,NA,degree_bs,inc_above100,42301,53,NA,5.433333333333334
+37,1,349,77,3,3,3,3,3,3,3,3,3,1,126,Yes,Not_Bothered,Neutral,sometimes,electricity,1954,female,white,NA,degree_associate,inc_50to100,85308,69,NA,8.533333333333333
+11,1,173,21,2,2,2,3,3,2,2,3,3,0,61,No,Not_Bothered,Not_Bothered,sometimes,"electricity, gas",1986,female,white,NA,degree_bs,inc_above100,08010,37,NA,4.083333333333333
+20,1,325,793,2,2,1,3,2,1,2,2,3,0,75,No,Concerned,Not_Bothered,often,electricity,1957,female,white,NA,college_some,inc_20to50,23111,66,NA,7
+17,1,128,118,3,3,3,2,3,3,2,3,3,0,66,Yes,Not_Bothered,Not_Bothered,often,electricity,1985,male,black,NA,college_some,inc_50to100,77802,38,NA,3.5166666666666666
+15,1,267,11,2,3,3,2,2,1,2,2,1,0,61,Yes,Not_Bothered,Concerned,often,"electricity, gas",1956,female,"white, native",NA,degree_bs,inc_50to100,73118,67,NA,5.716666666666667
+56,1,147,336,3,3,3,3,3,3,3,3,3,1,67,Yes,Not_Bothered,Not_Bothered,often,electricity,1963,female,white,NA,college_some,inc_above100,33772,60,NA,4.5
+21,1,145,819,2,2,2,2,2,2,3,2,2,0,65,No,Neutral,Concerned,often,"electricity, gas",1989,male,asian,NA,degree_bs,inc_50to100,94112,34,NA,3.85
+31,1,199,719,1,1,1,1,1,1,1,1,1,1,74,No,Neutral,Neutral,sometimes,"electricity, gas",1970,female,white,NA,degree_bs,inc_20to50,22554,53,NA,5.066666666666666
+35,1,240,85,2,3,2,2,3,3,3,3,2,0,104,No,Concerned,Concerned,often,gas,1974,male,"white, native",NA,degree_bs,inc_50to100,59808,49,NA,6.316666666666666
+23,1,156,178,1,2,1,3,3,1,2,2,1,0,60,not_aware,Neutral,Not_Bothered,sometimes,"electricity, gas",1985,male,white,NA,degree_bs,inc_above100,62095,38,NA,3.9833333333333334
+26,1,230,510,1,1,1,1,1,1,3,3,3,0,67,No,Not_Bothered,Neutral,often,"electricity, gas",1953,male,white,NA,degree_bs,inc_50to100,90066,70,NA,5.383333333333334
+41,1,407,562,2,2,3,3,3,2,2,2,3,0,118,not_aware,Not_Bothered,Not_Bothered,often,electricity,1971,male,white,NA,degree_bs,inc_20to50,32246,52,NA,9.433333333333334
+24,1,301,261,2,3,2,2,2,3,3,3,2,0,85,Yes,Not_Bothered,Not_Bothered,often,"electricity, gas",1965,male,white,NA,degree_grad,inc_above100,29229,58,NA,6.833333333333333
+49,1,1154,530,1,3,3,3,3,1,3,3,1,0,79,not_aware,Neutral,Concerned,sometimes,"electricity, gas",1969,female,white,NA,degree_bs,inc_50to100,53555,54,NA,21.366666666666667
+18,1,158,640,1,1,1,1,1,1,3,1,3,0,63,Yes,Not_Bothered,Neutral,often,"electricity, gas",1989,genderNonconform,white,NA,hs,inc_50to100,49009,34,NA,3.9833333333333334
+16,1,261,38,2,3,1,2,1,2,3,2,2,0,75,No,Concerned,Neutral,often,electricity,1968,female,white,NA,college_some,inc_50to100,32738,55,NA,5.866666666666666
+17,1,132,395,3,3,3,3,3,3,3,3,3,1,58,Yes,Concerned,Neutral,often,"electricity, gas",1983,female,white,NA,degree_bs,inc_50to100,48872,40,NA,3.45
+93,1,1148,12,2,2,3,2,3,2,3,2,3,0,442,No,Neutral,Not_Bothered,sometimes,"electricity, gas",1985,male,white,NA,degree_bs,inc_50to100,06040,38,NA,28.05
+26,1,270,105,1,3,1,1,1,3,3,1,3,0,92,No,Concerned,Neutral,often,electricity,1974,female,"asian, black",WA,degree_bs,inc_above100,98001,49,NA,6.466666666666667
+33,1,246,236,2,3,3,1,2,3,3,1,3,0,70,Yes,Neutral,Neutral,sometimes,electricity,1972,female,white,NA,degree_bs,inc_50to100,28150,51,NA,5.816666666666666
+124,1,677,637,3,3,3,3,2,3,2,2,3,0,0,Yes,Concerned,Neutral,often,electricity,1996,male,black,NA,degree_grad,inc_20to50,10001,27,NA,13.35
+12,1,466,138,2,2,3,3,2,3,3,3,3,0,98,No,Not_Bothered,Concerned,often,electricity,1988,male,"white, hispanic",NA,degree_bs,inc_50to100,30028,35,NA,9.6
+35,1,328,596,1,1,1,3,1,3,1,1,3,0,60,not_aware,Concerned,Not_Bothered,sometimes,electricity,1977,female,white,NA,degree_bs,inc_50to100,97103,46,NA,7.05
+25,1,229,972,1,1,3,1,1,1,1,3,3,0,70,Yes,Neutral,Concerned,often,"electricity, gas",1955,male,white,NA,degree_bs,inc_above100,53575,68,NA,5.4
+22,1,335,244,1,2,3,1,1,1,2,2,1,0,69,No,Concerned,Concerned,often,electricity,1992,female,white,NA,degree_grad,inc_above100,32311,31,"None, thank you for your time and effort :)",7.1
+22,1,165,734,1,1,1,1,1,1,1,1,1,1,95,No,Not_Bothered,Not_Bothered,often,"electricity, gas",1971,male,white,NA,degree_bs,inc_50to100,81520,52,NA,4.7
+33,1,357,528,1,1,1,1,1,1,1,1,1,1,96,No,Not_Bothered,Not_Bothered,often,"electricity, gas",1972,female,white,NA,degree_bs,inc_50to100,61360,51,n/a,8.1
+11,1,184,128,1,2,2,1,2,3,3,1,2,0,55,No,Concerned,Concerned,often,"electricity, gas",1982,male,white,NA,college_some,inc_50to100,18706,41,NA,4.166666666666667
+15,1,496,861,1,1,1,1,1,1,1,1,3,0,44,No,Concerned,Concerned,sometimes,"electricity, gas",1992,female,white,NA,degree_associate,inc_20to50,63028,31,NA,9.25
+34,1,442,401,2,2,3,2,2,2,2,2,3,0,91,No,Neutral,Neutral,sometimes,gas,1995,male,white,NA,degree_associate,inc_50to100,61610,28,NA,9.45
+28,1,297,241,2,3,3,2,3,3,1,1,3,0,55,No,Concerned,Concerned,often,"electricity, gas",1993,female,white,NA,degree_bs,inc_50to100,27203,30,NA,6.333333333333333
+31,1,175,573,2,3,3,3,2,2,3,2,2,0,61,No,Neutral,Neutral,sometimes,"electricity, gas",1979,transMale,white,NA,degree_associate,inc_10to20,60102,44,NA,4.45
+41,1,232,855,3,3,3,3,2,3,2,3,3,0,180,No,Neutral,Concerned,often,electricity,1974,male,black,NA,degree_bs,inc_above100,33629,49,NA,7.55
+27,1,136,543,3,3,3,3,3,3,3,3,3,1,71,Yes,Not_Bothered,Neutral,often,"electricity, gas",1959,female,white,NA,degree_bs,inc_20to50,27603,64,NA,3.9
+26,1,224,901,1,3,3,1,1,2,3,1,3,0,65,No,Neutral,Neutral,sometimes,electricity,1970,male,white,NA,college_some,inc_50to100,46176,53,NA,5.25
+157,1,107,424,2,3,2,3,3,3,1,3,3,0,49,Yes,Not_Bothered,Neutral,often,"electricity, gas",1985,female,white,NA,degree_bs,inc_50to100,52403,38,NA,5.216666666666667
+76,1,532,132,1,1,1,1,1,3,3,3,3,0,401,No,Neutral,Not_Bothered,sometimes,"electricity, gas",1974,male,black,NA,degree_grad,inc_above100,78254,49,NA,16.816666666666666
+29,1,156,829,1,1,1,1,1,1,1,1,1,1,65,Yes,Neutral,Neutral,sometimes,electricity,1965,male,white,NA,degree_grad,inc_above100,44012,58,NA,4.166666666666667
+22,1,214,489,3,3,3,3,3,3,3,3,3,1,88,Yes,Concerned,Concerned,often,electricity,1961,male,white,NA,degree_bs,inc_20to50,59901,62,NA,5.4
+27,1,453,887,1,1,1,1,1,1,1,1,1,1,115,Yes,Neutral,Neutral,often,"electricity, gas",1957,male,white,NA,degree_bs,inc_50to100,93010,66,"I've used all three, gas cooks the most evenly.",9.916666666666666
+23,1,589,459,2,3,3,3,2,2,3,3,2,0,54,Yes,Neutral,Concerned,often,"electricity, gas",1991,female,white,NA,degree_bs,inc_50to100,52003,32,NA,11.1
+48,1,458,954,2,3,3,2,2,2,2,2,3,0,97,No,Concerned,Neutral,often,"electricity, gas",1989,male,black,NA,degree_bs,inc_50to100,48509,34,none.,10.05
+215,1,561,486,2,3,3,2,3,2,2,2,1,0,823,Yes,Not_Bothered,Not_Bothered,sometimes,"electricity, gas",1976,male,white,NA,degree_associate,inc_50to100,18704,47,NA,26.65
+22,1,449,374,3,3,3,1,3,1,3,2,2,0,90,Yes,Not_Bothered,Not_Bothered,sometimes,electricity,1992,male,white,NA,degree_bs,inc_50to100,35803,31,NA,9.35
+44,1,435,376,2,2,3,3,2,2,2,2,3,0,62,No,Neutral,Concerned,often,electricity,1983,male,asian,NA,vocational,inc_above100,55104,40,NA,9.016666666666667
+148,1,545,438,2,2,2,2,2,2,2,2,2,1,151,Yes,Concerned,Concerned,often,"electricity, gas",1972,male,black,NA,degree_bs,inc_above100,92117,51,NA,14.066666666666666
+16,1,161,440,2,3,2,2,3,3,2,3,3,0,63,Yes,Not_Bothered,Not_Bothered,sometimes,electricity,1981,male,white,NA,college_some,inc_20to50,93241,42,NA,4
+119,1,181,167,2,3,2,2,2,2,3,2,3,0,57,not_aware,Not_Bothered,Not_Bothered,sometimes,electricity,1980,male,white,NA,hs,inc_20to50,45011,43,NA,5.95
+105,1,262,511,1,3,3,3,3,3,3,1,1,0,74,No,Neutral,Concerned,often,electricity,1982,male,white,NA,hs,inc_50to100,40069,41,NA,7.35
+39,1,241,202,1,1,1,3,3,1,1,1,3,0,136,not_aware,Neutral,Neutral,sometimes,"electricity, gas",1965,female,white,NA,degree_associate,inc_50to100,08753,58,NA,6.933333333333334
+16,1,125,615,1,1,1,1,1,1,1,1,1,1,226,No,Concerned,Concerned,sometimes,electricity,1973,male,black,NA,degree_associate,inc_50to100,20149,50,NA,6.116666666666666
+83,1,282,58,1,1,2,2,3,1,2,3,3,0,104,No,Concerned,Not_Bothered,often,"electricity, gas",1962,male,white,NA,degree_bs,inc_50to100,87008,61,NA,7.816666666666666
+35,1,332,83,1,1,1,2,1,1,1,3,1,0,53,No,Not_Bothered,Neutral,often,"electricity, gas",1988,male,white,NA,degree_associate,inc_50to100,NA,35,NA,7
+13,1,185,494,1,3,2,1,2,3,2,3,1,0,69,No,Concerned,Concerned,sometimes,"electricity, gas",1985,male,black,NA,degree_bs,inc_20to50,70601,38,NA,4.45
+24,1,306,897,1,1,3,1,3,3,2,3,2,0,84,Yes,Not_Bothered,Not_Bothered,often,electricity,1991,male,hispanic,NA,college_some,inc_50to100,33897,32,NA,6.9
+176,1,619,241,2,3,3,2,2,2,2,2,2,0,297,not_aware,Not_Bothered,Not_Bothered,sometimes,electricity,1956,male,white,NA,degree_grad,inc_50to100,06877,67,NA,18.2
+15,1,214,24,3,3,3,3,3,3,3,3,3,1,84,No,Neutral,Concerned,sometimes,electricity,1982,male,"white, pacific",Male,degree_associate,inc_20to50,32159,41,NA,5.216666666666667
+24,1,173,311,1,2,2,1,2,1,1,2,2,0,51,No,Not_Bothered,Not_Bothered,sometimes,"electricity, gas",1991,male,"black, hispanic",NA,degree_bs,inc_50to100,11201,32,NA,4.133333333333334
+35,1,478,82,1,3,3,2,2,1,1,1,3,0,73,No,Concerned,Neutral,often,electricity,1973,male,asian,NA,degree_bs,inc_50to100,94579,50,NA,9.766666666666667
+18,1,211,796,1,1,1,1,1,2,3,1,1,0,51,No,Concerned,Not_Bothered,often,gas,1970,male,white,NA,degree_bs,inc_above100,10011,53,NA,4.666666666666667
+23,1,342,450,2,2,3,3,3,3,3,3,2,0,0,No,Neutral,Concerned,often,gas,1952,female,black,NA,degree_grad,inc_above100,20149,71,NA,6.083333333333333
